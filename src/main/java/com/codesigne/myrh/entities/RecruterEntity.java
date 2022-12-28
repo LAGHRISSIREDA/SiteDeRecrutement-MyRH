@@ -20,7 +20,7 @@ public class RecruterEntity implements Serializable {
     @Column(nullable = false,length = 220)
     private String adress;
 
-    @Column(nullable = false , length = 120)
+    @Column(nullable = false , length = 120 , unique = true)
     private String email;
 
     @Column(nullable = false)
