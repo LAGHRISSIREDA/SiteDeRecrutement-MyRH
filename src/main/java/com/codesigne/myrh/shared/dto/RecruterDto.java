@@ -3,17 +3,19 @@ package com.codesigne.myrh.shared.dto;
 import java.io.Serializable;
 
 public class RecruterDto implements Serializable {
-
     private long id;
     private String recruterId;
-    private String login;
     private String password;
     private String adress;
     private String email;
     private String phone;
+    private String picture;
     private String encryptedPassword;
     private String emailVerificationToken;
     private Boolean emailVerificationStatus = false;
+
+    // getters and setters --------------------------------------
+
 
     public long getId() {
         return id;
@@ -29,14 +31,6 @@ public class RecruterDto implements Serializable {
 
     public void setRecruterId(String recruterId) {
         this.recruterId = recruterId;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
     }
 
     public String getPassword() {
@@ -69,6 +63,14 @@ public class RecruterDto implements Serializable {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
     }
 
     public String getEncryptedPassword() {
