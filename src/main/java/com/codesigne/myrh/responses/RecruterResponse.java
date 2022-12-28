@@ -1,23 +1,21 @@
-package com.codesigne.myrh.requests;
+package com.codesigne.myrh.responses;
 
-public class RecruterRequest {
-
-    private String password;
+public class RecruterResponse {
+    private String recruterId;
     private String adress;
     private String email;
     private String phone;
     private String picture;
 
-    //getters and setters ------------------
+    //getters and setters -----------------------------
 
 
-
-    public String getPassword() {
-        return password;
+    public String getRecruterId() {
+        return recruterId;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setRecruterId(String recruterId) {
+        this.recruterId = recruterId;
     }
 
     public String getAdress() {

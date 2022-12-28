@@ -1,20 +1,44 @@
-package com.codesigne.myrh.shared.dto;
+package com.codesigne.myrh.entities;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 
 import java.io.Serializable;
 
-public class RecruterDto implements Serializable {
+@Entity(name = "recruters")
+public class RecruterEntity implements Serializable {
+
+    @Id
+    @GeneratedValue
     private long id;
+
+    @Column(nullable = false)
     private String recruterId;
-    private String password;
+
+    @Column(nullable = false,length = 220)
     private String adress;
+
+    @Column(nullable = false , length = 120)
     private String email;
+
+    @Column(nullable = false)
     private String phone;
+
+    @Column(nullable = false)
     private String picture;
+
+    @Column(nullable = false)
     private String encryptedPassword;
+
+    @Column(nullable = true)
     private String emailVerificationToken;
+
+    @Column(nullable = false)
     private Boolean emailVerificationStatus = false;
 
-    // getters and setters --------------------------------------
+    //getters and setters -----------------------------------
 
 
     public long getId() {
@@ -31,14 +55,6 @@ public class RecruterDto implements Serializable {
 
     public void setRecruterId(String recruterId) {
         this.recruterId = recruterId;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getAdress() {
