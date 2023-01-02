@@ -25,9 +25,11 @@ public class RecruterController {
 
     @PostMapping
     public RecruterResponse createRecruter(@RequestBody RecruterRequest recruterRequest){
+        System.out.println("into createRecruter Controller -------");
         RecruterDto recruterDto = new RecruterDto();
         BeanUtils.copyProperties(recruterRequest,recruterDto);
         RecruterDto createRecuter = recruterService.createRecuter(recruterDto);
+
         RecruterResponse recruterResponse = new RecruterResponse();
         BeanUtils.copyProperties(createRecuter,recruterResponse);
         return recruterResponse;
