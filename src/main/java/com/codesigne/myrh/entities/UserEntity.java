@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import java.io.Serializable;
 
 @Entity(name = "recruters")
-public class RecruterEntity implements Serializable {
+public class UserEntity implements Serializable {
 
     @Id
     @GeneratedValue
